@@ -1,9 +1,10 @@
 import React from 'react';
-
+import Employee from './Employee'
 function App() {
   return (
     <div>
-      Empty App
+      <Employee></Employee>
+       {/* Empty App */}
     </div>
   );
 }
