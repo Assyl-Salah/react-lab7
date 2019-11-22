@@ -4,21 +4,37 @@ class Form extends React.Component
 constructor(props)
     {
     super(props);
+    this.state={
+        age : 0
+    }
+    this.agehandler=this.agehandler.bind(this);
+    }
+
+    agehandler=(e)=>{
+this.setState({age:e.target.value});
     }
 render()
     {
         return(
-            <form  onSubmit={this.props.onSubmith}>
-<label >Age :</label><input type="number" name="age"></input>
+            <form >
+<label >Age :</label><input type="number" name="age" onChange={e=>this.agehandler(e)}></input>
 <br/>
-<label>Parent Name:</label><input  type="text" name="name"></input>
+{this.state.age <18 ?(
+    <div>
+<label>Parent Name: </label><input  type="text" name="name"></input>
 <br/>
-<label >Parent Phone Number :</label><input  type="number" name="phone"></input>
+<label >Parent Phone Number: </label><input  type="number" name="phone"></input>
 <br/>
-<labe>Email</labe><input name="email"></input>
-<button type="submit"  >Add</button>
-              
-              
+<button type="submit"  >Submit</button> 
+</div>)
+:(
+    <div>
+<label> Name: </label><input  type="text" name="name"></input>
+<br></br>
+<labe>Email: </labe><input name="email"></input>
+<br></br>
+<button type="submit"  >Submit</button> 
+</div> )}         
             </form>
         )
 
