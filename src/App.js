@@ -1,6 +1,9 @@
 import React from 'react';
-// import Employee from './Employee'
-import Form from './Form'
+//import { BrowserRouter, Route , Switch} from 'react-router-dom';
+// import Employee from './Employee';
+import Form from './Form';
+//import Success from './Sucess';
+
 function App() {
   return (
     <div>  {/* Empty App */}
@@ -8,6 +11,12 @@ function App() {
       {/* <Employee></Employee> */}
      <Form></Form>
 
+     {/* <BrowserRouter>
+     <Switch>
+        <Route exact path="/"  componet={Form}/>
+        <Route path="/success"  componet={Success} />
+        </Switch>
+      </BrowserRouter> */}
     </div>
   );
 }
